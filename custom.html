@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>自定义页面</title>
+  <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+  <style>
+    .data-table{
+      padding:10px;
+      margin:10px 0;
+      background-color: #f5f5f5;
+    }
+    .data-table > div,.data-filter > div{
+      padding:5px 0;
+    }
+    .data-filter-item{
+      background-color: #f5f5f5;
+    }
+    .data-filter-item > div {
+      padding:5px 10px;
+    }
+    .data-filter-item-content{
+      padding:10px;
+      margin:10px;
+      background-color: #ddd;
+    }
+    .item-box-2{
+      margin: 20px;
+      padding:10px;
+      background-color: #eee;
+    }
+    .type-item-box-5{
+      margin: 10px;
+      padding:10px;
+      background-color: #eee;
+    }
+    .data-table-box-1{
+      margin: 10px;
+      padding:10px;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+<h1>自定义页面</h1>
+<h2>页面名称：<input type="text" > </h2>
+<div>
+  <h2>数据展示</h2>
+
+  <div class="data-tab">
+    展示列表：<button>增加</button>
+  </div>
+  <div class="data-table">
+    <h4>基础项</h4>
+    <div>
+      <div>标题： <input type="text" class="data-title"> <label><input type="checkbox" class="data-show">显示</label></div>
+    </div>
+    <div>
+      数据表： <select>
+      <option>table_1</option>
+      <option>table_2</option>
+      <option>table_3</option>
+    </select>
+    </div>
+    <div class="data-type">
+      样式：
+      <label class="data-type-item"><input type="radio" name="type" checked>基础型表格</label>
+      <label class="data-type-item"><input type="radio" name="type">树状型表格</label>
+      <label class="data-type-item"><input type="radio" name="type">多级表头型表格</label>
+      <label class="data-type-item"><input type="radio" name="type">展开内容型表格</label>
+      <!--<label class="data-type-item"><input type="radio" name="type">标签页型表格</label>
+      <div class="data-type-content-4" style="display:none">
+        <ul>
+          <li>组合</span>：
+            <div>
+              名称：<input type="text">
+            </div>
+            <div>
+              <label><input type="radio" name="type-1" checked>基础型表格</label>
+              <label><input type="radio" name="type-1">树状型表格</label>
+              <label><input type="radio" name="type-1">多级表头型表格</label>
+              <label><input type="radio" name="type-1">展开内容型表格</label>
+            </div>
+          </li>
+          <li>表格<span>2</span>：
+            <div>
+              名称：<input type="text">
+            </div>
+            <div>
+              <label><input type="radio" name="type-2" checked>基础型表格</label>
+              <label><input type="radio" name="type-2">树状型表格</label>
+              <label><input type="radio" name="type-2">多级表头型表格</label>
+              <label><input type="radio" name="type-2">展开内容型表格</label>
+            </div>
+          </li>
+          <button>增加</button>
+        </ul>
+
+      </div>-->
+    </div>
+    <div>
+      显示字段：字段 <input type="text"> 字段 <input type="text"> <button>+</button>
+    </div>
+    <div>
+      是否可操作：<input type="checkbox" class="">是
+    </div>
+    <div>
+      排序：<input type="text">
+    </div>
+  </div>
+  <div class="data-table">
+    <h4>组合项</h4>
+    <div>标题： <input type="text" class="data-title"> <label><input type="checkbox" class="data-show">显示</label></div>
+    <div>
+      排序：<input type="text">
+    </div>
+    <div class="data-table-box-1">
+
+      <div>
+        名称： <input type="text" class="data-title">
+      </div>
+      <div>
+        数据表： <select>
+        <option>table_1</option>
+        <option>table_2</option>
+        <option>table_3</option>
+      </select>
+      </div>
+      <div class="data-type">
+        样式：
+        <label class="data-type-item"><input type="radio" name="type" checked>基础型表格</label>
+        <label class="data-type-item"><input type="radio" name="type">树状型表格</label>
+        <label class="data-type-item"><input type="radio" name="type">多级表头型表格</label>
+        <label class="data-type-item"><input type="radio" name="type">展开内容型表格</label>
+        <!--<label class="data-type-item"><input type="radio" name="type">标签页型表格</label>
+        <div class="data-type-content-4" style="display:none">
+          <ul>
+            <li>组合</span>：
+              <div>
+                名称：<input type="text">
+              </div>
+              <div>
+                <label><input type="radio" name="type-1" checked>基础型表格</label>
+                <label><input type="radio" name="type-1">树状型表格</label>
+                <label><input type="radio" name="type-1">多级表头型表格</label>
+                <label><input type="radio" name="type-1">展开内容型表格</label>
+              </div>
+            </li>
+            <li>表格<span>2</span>：
+              <div>
+                名称：<input type="text">
+              </div>
+              <div>
+                <label><input type="radio" name="type-2" checked>基础型表格</label>
+                <label><input type="radio" name="type-2">树状型表格</label>
+                <label><input type="radio" name="type-2">多级表头型表格</label>
+                <label><input type="radio" name="type-2">展开内容型表格</label>
+              </div>
+            </li>
+            <button>增加</button>
+          </ul>
+
+        </div>-->
+      </div>
+      <div>
+        显示字段：字段 <input type="text"> 字段 <input type="text"> <button>+</button>
+      </div>
+      <div>
+        是否可操作：<input type="checkbox" class="">是
+      </div>
+
+    </div>
+    <button>增加</button>
+  </div>
+  <h2>数据过滤
+  </h2>
+  <div class="data-filter">
+    过滤列表： <button>增加</button>
+  </div>
+  <div class="data-filter-item">
+    <h4>基础项</h4>
+    <div>
+      标题： <input type="text"> <input type="checkbox">不显示
+    </div>
+    <div>
+      排序：<input type="text">
+    </div>
+    <div>
+      名称：<input type="text">
+    </div>
+    <div>
+      参数：<input type="text">
+    </div>
+    <div>
+      样式：
+      <label><input type="radio" name="item-type" checked>日期</label>
+      <label><input type="radio" name="item-type">输入框</label>
+      <label><input type="radio" name="item-type">下拉列表</label>
+    </div>
+    <div class="data-filter-item-content item-1">
+      样式：
+      <label><input type="radio" name="item-type-tiem" checked>样式一</label>
+      <label><input type="radio" name="item-type-tiem">样式二</label>
+      <label><input type="radio" name="item-type-tiem">样式三</label>
+    </div>
+    <div class="data-filter-item-content item-2">
+      <div>
+        类型： <label><input type="radio" name="item-type-3" checked>模糊查询</label> <label><input type="radio" name="item-type-3">精准查询</label> 值：  <input type="text">
+      </div>
+    </div>
+    <div class="data-filter-item-content item-3">
+      <div>
+        样式 ： <label><input type="radio" name="item-type-4" checked>单项式</label> <label><input type="radio" name="item-type-4">多项式</label>
+        <div class="type-item-box-5">
+          名称：<input type="text"> 值：<input type="text"> <button>增加</button>
+        </div>
+        <div class="type-item-box-5">
+          <div class="type-item-box-5" style="background-color: #e5e5e5">
+            名称：<input type="text"> 值：<input type="text"> <button>增加</button>
+          </div>
+          <button>增加</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="data-filter-item">
+    <h4>组合项</h4>
+    <div>
+      标题： <input type="text"> <input type="checkbox">不显示
+    </div>
+    <div>
+      排序：<input type="text">
+    </div>
+    <div>
+      选项名：<input type="text">
+    </div>
+    <div class="item-box-2">
+
+      <div>
+        名称：<input type="text">
+      </div>
+
+      <div>
+        参数：<input type="text">
+      </div>
+      <div>
+        样式：
+        <label><input type="radio" name="item-type">输入框</label>
+        <label><input type="radio" name="item-type">下拉列表</label>
+        <label><input type="radio" name="item-type">多级联动</label>
+      </div>
+      <div class="data-filter-item-content item-1">
+        样式：
+        <label><input type="radio" name="item-type-tiem" checked>区域</label>
+        <label><input type="radio" name="item-type-tiem">行业</label>
+      </div>
+      <button>增加</button>
+    </div>
+
+  </div>
+</div>
+<script>
+  /*$(document).on('click', '.data-show', function () {
+    if ($(this).prop('checked')) {
+      $('.data-title').attr('disabled', false);
+    } else {
+
+      $('.data-title').attr('disabled', true);
+    }
+  })*/
+  $(document).on('click', '.data-type-item', function () {
+    if ($(this).index() === 4) {
+      $('.data-type-content-4').show();
+    } else {
+      $('.data-type-content-4').hide();
+    }
+  })
+</script>
+</body>
+</html>
